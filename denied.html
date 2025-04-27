@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="denied.css">
+    <title>ACCESS DENIED</title>
+</head>
+<body>
+  <div class="navbar">         
+    <div class="nav-links">           
+        <a href="#">Parking Forms</a>           
+        <a href="#">Parking Overview</a>           
+        <a href="#">Plate Number Verification</a>         
+    </div>         
+    <div class="logout">            
+        <a href="#">Logout</a>         
+    </div>       
+</div>         
+
+<!-- Modal - Added code -->
+<div class="modal-container" id="accessDeniedModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal">
+        <div class="warning-icon">
+            <!-- Replace with your actual warning icon JPG path -->
+            <img src="denied.png" alt="Warning Icon">
+        </div>
+        <h2 class="modal-title">Access Denied</h2>
+        <p class="modal-message">Only Admin and Cashier can access this section.</p>
+        <button class="modal-button" id="okButton">OK</button>
+    </div>
+</div>
+
+<script>
+  // Get elements for modal
+  const accessDeniedModal = document.getElementById('accessDeniedModal');
+  const okButton = document.getElementById('okButton');
+
+  // Hide modal when clicking OK button
+  okButton.addEventListener('click', function() {
+      accessDeniedModal.classList.add('hidden');
+  });
+
+  // Also hide modal when clicking on backdrop
+  accessDeniedModal.querySelector('.modal-backdrop').addEventListener('click', function() {
+      accessDeniedModal.classList.add('hidden');
+  });
+</script>
+
+</body>
+</html>

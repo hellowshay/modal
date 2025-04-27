@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>PAID</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+          <a href="#">Parking Forms</a>
+          <a href="#">Parking Overview</a>
+          <a href="#">Plate Number Verification</a>
+        </div>
+        <div class="logout">
+          <a href="#" onclick="showModal(); return false;">Logout</a>
+        </div>
+    </div>
+    <div class="input-group">
+        <input type="text" placeholder="LIB.090">
+        <button>Verify</button>
+    </div>
+    <div class="white-box">
+        <h1 class="slot"> SLOT 5</h1>
+        <h2 class="floor">2nd Floor</h2>
+        <h3 class="name"> First Name:</h3>
+        <h3 class="last"> Last Name:</h3>
+        <h3 class="plate">Plate Number: </h3>
+        <h3 class="status"> Payment Status:</h3>
+        <h3 class="Email"> Email:</h3>
+        <h3 class="number">Phone Number:</h3>
+        <h3 class="time">Entry Time:</h3>
+    </div>
+    <button class="clear-btn">Clear All</button>
+    
+    <div class="modal-container" id="logoutModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <img src="image-Photoroom (16).png" alt="Logout icon" width="50" height="50">
+              </div>
+          <div class="modal-title">Are you sure you want to log out?</div>
+          <div class="modal-buttons">
+            <button class="cancel-btn" onclick="hideModal()">Cancel</button>
+            <button class="confirm-btn">Logout</button>
+          </div>
+        </div>
+    </div>
+    
+    <script>
+        // Function to show the modal
+        function showModal() {
+          document.getElementById('logoutModal').style.display = 'flex';
+        }
+        
+        // Function to hide the modal
+        function hideModal() {
+          document.getElementById('logoutModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+          const modal = document.getElementById('logoutModal');
+          if (event.target === modal) {
+            hideModal();
+          }
+        }
+    </script>
+</body>
+</html>
